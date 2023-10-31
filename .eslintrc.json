@@ -1,14 +1,35 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es2021": true
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended"
+  ],
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
+  "plugins": ["react", "react-refresh"],
+  "settings": { "react": { "version": "18.2" } },
   "rules": {
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
-  }
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-underscore-dangle": 0
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js", "**/*.test.jsx"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
