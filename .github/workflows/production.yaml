@@ -7,6 +7,14 @@ on:
     branches:
       - main
 jobs:
+  Run-specs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Run React Tests'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
   Deploy-Production:
     runs-on: ubuntu-latest
     steps:
