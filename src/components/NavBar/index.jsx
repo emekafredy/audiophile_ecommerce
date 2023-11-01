@@ -15,7 +15,7 @@ function NavBar() {
         text-white-100
         w-full"
     >
-      <nav className="sm-max:w-[90%] w-[77%] m-auto flex justify-between items-center py-8">
+      <nav className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto flex justify-between items-center py-8">
         <div className="md-min:hidden flex justify-between items-center">
           <img src={HamburgerIcon} alt="menu" className="mr-10" />
           <Link to="/" className="xs-max:hidden">
@@ -44,7 +44,7 @@ function NavBar() {
           <img src={CartIcon} alt="app-logo" />
         </Link>
       </nav>
-      <div className="sm-max:w-[90%] w-[77%] m-auto border-b border-white-100 opacity-10 md-min:opacity-20" />
+      <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto border-b border-white-100 opacity-10 md-min:opacity-20" />
     </div>
   );
 }

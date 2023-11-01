@@ -1,10 +1,12 @@
-import Hero from './Hero';
+import Categories from '../../components/Common/Categories';
+import Hero from '../../components/Hero';
 
 function Home() {
   return (
-    <div className="bg-black-100 sm-max:w-[90%] w-[77%] m-auto">
+    <>
       <Hero />
-    </div>
+      <Categories />
+    </>
   );
 }
 

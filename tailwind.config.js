@@ -5,11 +5,11 @@ export default {
     screens: {
       'xs-min': '0px',
       'sm-min': '476px',
-      'md-min': '769px',
+      'md-min': '768px',
       'lg-min': '969px',
       'xl-min': '1200px',
       'xs-max': { max: '475px' },
-      'sm-max': { max: '768px' },
+      'sm-max': { max: '767px' },
       'md-max': { max: '968px' },
       'lg-max': { max: '1999px' },
     },

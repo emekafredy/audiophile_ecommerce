@@ -1,16 +1,15 @@
-/* eslint-disable react/button-has-type */
+/* eslint-disable react/forbid-prop-types */
 import className from 'classnames';
 import PropTypes from 'prop-types';
 
 function Button({
-  title,
+  content,
   fullwidth,
   rounded,
   roundedBG,
   primary,
   secondary,
   noBorder,
-  buttonType,
   handleClick,
   disabled,
   uppercase,
@@ -29,7 +28,7 @@ function Button({
       'bg-orange-200 text-white-100 hover:bg-orange-100': primary,
       'bg-white-100 text-black-200 border border-black-200 hover:bg-black-100 hover:text-white-100':
         secondary,
-      'bg-white-100 text-gray-100 hover:text-orange-200': noBorder,
+      'bg-transparent text-gray-100 hover:text-orange-200': noBorder,
       'inline-flex items-center': hasIcon,
     },
   );
@@ -37,30 +36,29 @@ function Button({
   return (
     <button
       className={classes}
-      type={buttonType}
+      type="button"
       onClick={handleClick}
       disabled={disabled}
     >
-      {title}
+      {content}
       {rightIcon}
     </button>
   );
 }
 
 Button.propTypes = {
-  title: PropTypes.string.isRequired,
+  content: PropTypes.any.isRequired,
   fullwidth: PropTypes.bool,
   rounded: PropTypes.bool,
   roundedBG: PropTypes.bool,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
   noBorder: PropTypes.bool,
-  buttonType: PropTypes.arrayOf(['submit', 'button', 'reset']),
   handleClick: PropTypes.func,
   disabled: PropTypes.bool,
   uppercase: PropTypes.bool,
   extraClasses: PropTypes.string,
-  rightIcon: PropTypes.element,
+  rightIcon: PropTypes.any,
   hasIcon: PropTypes.bool,
 };
 
@@ -71,12 +69,11 @@ Button.defaultProps = {
   primary: false,
   secondary: false,
   noBorder: false,
-  buttonType: 'button',
   handleClick: () => {},
   disabled: false,
   uppercase: false,
   extraClasses: '',
-  rightIcon: PropTypes.element,
+  rightIcon: '',
   hasIcon: false,
 };
 
