@@ -37,6 +37,7 @@ export default {
     fontSize: {
       xs: '13px',
       sm: '14px',
+      smii: '15px',
       md: '18px',
       lg: '24px',
       xl: '28px',
@@ -61,6 +62,9 @@ export default {
         38: '38px',
         44: '44px',
         58: '58px',
+      },
+      backgroundImage: {
+        'desktop-hero': 'url(src/assets/home/desktop/image-hero.jpg)',
       },
     },
   },
