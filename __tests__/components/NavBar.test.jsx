@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import NavBar from '../../src/components/NavBar';
+import NavBar from '../../src/components/Common/NavBar';
 
 describe('NavBar test', () => {
   it('should contain the navbar menu', () => {

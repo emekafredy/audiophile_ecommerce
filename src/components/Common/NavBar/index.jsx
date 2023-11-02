@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/shared/desktop/logo.svg';
-import HamburgerIcon from '../../assets/shared/tablet/icon-hamburger.svg';
-import CartIcon from '../../assets/shared/desktop/icon-cart.svg';
+import Logo from '../../../assets/shared/desktop/logo.svg';
+import HamburgerIcon from '../../../assets/shared/tablet/icon-hamburger.svg';
+import CartIcon from '../../../assets/shared/desktop/icon-cart.svg';
 
 function NavBar() {
   return (
@@ -32,7 +32,7 @@ function NavBar() {
             <li key={item} className="inline font-semibold text-xs">
               <Link
                 to={`/${item}`}
-                className="md-min:mx-2 lg-min:mx-3 uppercase text-white-100 hover:text-orange-200"
+                className="md-min:mx-2 lg-min:mx-3 xl-min:mx-8 uppercase text-white-100 hover:text-orange-200"
               >
                 {item}
               </Link>

@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-import Button from '../../Button';
+import Button from '../Button';
 import ArrowRightIcon from '../../../assets/shared/desktop/icon-arrow-right.svg';
 import categoriesData from './data';
 
 function Categories() {
   return (
-    <div className="bg-white-200 py-52">
+    <div className="bg-white-200 pt-52 pb-36">
       <div
         className="grid sm-max:grid-cols-1 md-min:grid-cols-3
           sm-max:gap-32 md-min:gap-2 lg-min:gap-4 xl-min:gap-10
@@ -22,13 +22,13 @@ function Categories() {
                 src={category.imagePath}
                 className="sm-max:w-64 md-min:w-48 lg-min:w-52 xl-min:w-64 md-min:h-[80%] lg-min:h-[80%] xl-min:h-[90%]
                   m-auto sm-max:-mt-20 md-min:-mt-16 lg-min:-mt-18 xl-min:-mt-20 text-center"
-                alt="headphones"
+                alt={category.alt}
               />
               <p className="uppercase text-md font-bold leading-25 tracking-sm mb-2">
                 {category.name}
               </p>
               <Button
-                noBorder
+                transparent
                 hasIcon
                 content={
                   <Link

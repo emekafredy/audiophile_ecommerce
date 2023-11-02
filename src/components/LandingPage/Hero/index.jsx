@@ -1,4 +1,4 @@
-// import Button from '../Button';
+// import Button from '../../Common/Button';
 // import HeroImage from '../../assets/home/desktop/image-hero.jpg';
 
 function Hero() {
@@ -6,8 +6,10 @@ function Hero() {
     <div className="bg-black-100">
       <div className="h-[800px] grid grid-cols-1 gap-4 sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto">
         {/* <div className="py-40">
-          <p className="text-white-100 opacity-50 leading-19
-            tracking-xl font-regular text-sm uppercase mb-6">
+          <p
+            className="text-white-100 opacity-50 leading-19
+            tracking-xl font-regular text-sm uppercase mb-6"
+          >
             New product
           </p>
           <p className="text-white-100 font-bold uppercase text-4xl leading-58 tracking-lg mb-6">

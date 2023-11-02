@@ -9,13 +9,15 @@ function Button({
   roundedBG,
   primary,
   secondary,
-  noBorder,
+  black,
+  transparent,
   handleClick,
   disabled,
   uppercase,
   extraClasses,
   rightIcon,
   hasIcon,
+  transparentBlack,
 }) {
   const classes = className(
     `xs-min:text-xs md-min:text-sm font-semibold transition
@@ -28,7 +30,11 @@ function Button({
       'bg-orange-200 text-white-100 hover:bg-orange-100': primary,
       'bg-white-100 text-black-200 border border-black-200 hover:bg-black-100 hover:text-white-100':
         secondary,
-      'bg-transparent text-gray-100 hover:text-orange-200': noBorder,
+      'bg-black-200 text-white-100 hover:bg-gray-300 hover:text-white-100':
+        black,
+      'bg-transparent text-gray-100 hover:text-orange-200': transparent,
+      'bg-transparent text-black-200 border border-black-200 hover:text-white-100 hover:bg-black-200':
+        transparentBlack,
       'inline-flex items-center': hasIcon,
     },
   );
@@ -53,13 +59,15 @@ Button.propTypes = {
   roundedBG: PropTypes.bool,
   primary: PropTypes.bool,
   secondary: PropTypes.bool,
-  noBorder: PropTypes.bool,
+  black: PropTypes.bool,
+  transparent: PropTypes.bool,
   handleClick: PropTypes.func,
   disabled: PropTypes.bool,
   uppercase: PropTypes.bool,
   extraClasses: PropTypes.string,
   rightIcon: PropTypes.any,
   hasIcon: PropTypes.bool,
+  transparentBlack: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -68,13 +76,15 @@ Button.defaultProps = {
   roundedBG: false,
   primary: false,
   secondary: false,
-  noBorder: false,
+  black: false,
+  transparent: false,
   handleClick: () => {},
   disabled: false,
   uppercase: false,
   extraClasses: '',
   rightIcon: '',
   hasIcon: false,
+  transparentBlack: false,
 };
 
 export default Button;
