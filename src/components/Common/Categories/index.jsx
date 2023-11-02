@@ -19,7 +19,7 @@ function Categories() {
               className="text-center bg-gray-100 rounded-lg"
             >
               <img
-                src={category.imagePath}
+                src={category.image}
                 className="sm-max:w-64 md-min:w-48 lg-min:w-52 xl-min:w-64 md-min:h-[80%] lg-min:h-[80%] xl-min:h-[90%]
                   m-auto sm-max:-mt-20 md-min:-mt-16 lg-min:-mt-18 xl-min:-mt-20 text-center"
                 alt={category.alt}

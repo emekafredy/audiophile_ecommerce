@@ -8,14 +8,9 @@ function useScreenSize() {
   );
 
   useEffect(() => {
-    window.addEventListener('resize', (e) => {
-      if (window.innerWidth <= 570) {
-        setScreenSize('mobile');
-      } else if (window.innerWidth > 570 && window.innerWidth < 968) {
-        setScreenSize('tablet');
-      } else {
-        setScreenSize('desktop');
-      }
+    window.addEventListener('resize', async (e) => {
+      const size = await getScreenSize(window.innerWidth);
+      setScreenSize(size);
     });
 
     return () => {
