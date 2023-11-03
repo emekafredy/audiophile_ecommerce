@@ -67,16 +67,10 @@ export default {
         58: '58px',
       },
       backgroundImage: {
-        'desktop-hero': 'url(src/assets/home/desktop/image-hero.jpg)',
-        'speaker-2x7-desktop':
-          'url(src/assets/home/desktop/image-speaker-zx7.jpg)',
-        'speaker-2x7-tablet':
-          'url(src/assets/home/tablet/image-speaker-zx7.jpg)',
-        'speaker-2x7-mobile':
-          'url(src/assets/home/mobile/image-speaker-zx7.jpg)',
-        'speaker-2x9': 'url(src/assets/home/desktop/image-speaker-zx9.png)',
+        'desktop-hero': 'url(src/public/home/desktop/image-hero.jpg)',
+        'hero-tablet': 'url(src/public/home/tablet/image-hero.png)',
         'pattern-circles-svg':
-          'url(src/assets/home/desktop/pattern-circles.svg)',
+          'url(src/public/home/desktop/pattern-circles.svg)',
       },
       backgroundSize: {
         auto: 'auto',

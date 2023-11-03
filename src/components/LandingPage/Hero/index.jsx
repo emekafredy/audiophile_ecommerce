@@ -1,34 +1,79 @@
-// import Button from '../../Common/Button';
-// import HeroImage from '../../assets/home/desktop/image-hero.jpg';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Button from '../../Common/Button';
 
-function Hero() {
+function Hero({ data, screenSize }) {
   return (
     <div className="bg-black-100">
-      <div className="h-[800px] grid grid-cols-1 gap-4 sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto">
-        {/* <div className="py-40">
+      <div
+        className="lg-min:flex lg-min:flex-wrap lg-min:items-center lg-min:justify-between
+        md-max:bg-hero-tablet bg-no-repeat bg-cover bg-center
+        lg-min:w-[77%] m-auto sm-max:h-[800px] md-min:h-[700px] lg-min:h-auto"
+      >
+        <div
+          className="md-max:w-[100%] lg-min:w-[40%]
+          md-max:text-center xs-max:px-12 sm-min:px-24 md-min:px-40 lg-min:px-0 lg-min:pb-36
+          xs-max:pt-56 sm-min:pt-60 md-min:pt-40"
+        >
           <p
             className="text-white-100 opacity-50 leading-19
             tracking-xl font-regular text-sm uppercase mb-6"
           >
-            New product
+            {data.title1}
           </p>
-          <p className="text-white-100 font-bold uppercase text-4xl leading-58 tracking-lg mb-6">
-            XX99 Mark II Headphones
+          <p
+            className="text-white-100 font-bold uppercase
+            xs-max:text-xl sm-min:text-2xl md-min:text-3xl xl-min:text-4xl leading-58 tracking-lg mb-6"
+          >
+            {data.title2}
           </p>
 
           <p className="text-white-100 opacity-75 text-smii mb-8">
-            Experience natural, lifelike audio and exceptional build quality
-            made for the passionate music enthusiast.
+            {data.description}
           </p>
-          <Button primary uppercase content="See product" />
-        </div> */}
+          <Button
+            primary
+            uppercase
+            content={
+              <Link
+                to={`/${data.cta.link}`}
+                className="uppercase text-xs font-bold leading-19"
+              >
+                {data.cta.title}
+              </Link>
+            }
+          />
+        </div>
 
-        {/* <div className="py-40">
-          <img src={HeroImage} className="" alt="headphone" />
-        </div> */}
+        <div className="md-max:hidden lg-min:w-[60%]">
+          <img
+            src={data.image[`${screenSize}`]}
+            className="h-full w-full"
+            alt={data.image.alt}
+          />
+        </div>
       </div>
     </div>
   );
 }
+
+Hero.propTypes = {
+  data: PropTypes.shape({
+    title1: PropTypes.string.isRequired,
+    title2: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.shape({
+      desktop: PropTypes.string.isRequired,
+      tablet: PropTypes.string.isRequired,
+      mobile: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    }).isRequired,
+    cta: PropTypes.shape({
+      link: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+  screenSize: PropTypes.string.isRequired,
+};
 
 export default Hero;

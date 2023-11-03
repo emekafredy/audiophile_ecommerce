@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import Logo from '../../../assets/shared/desktop/logo.svg';
-import HamburgerIcon from '../../../assets/shared/tablet/icon-hamburger.svg';
-import CartIcon from '../../../assets/shared/desktop/icon-cart.svg';
+import Logo from '../../../public/shared/desktop/logo.svg';
+import HamburgerIcon from '../../../public/shared/tablet/icon-hamburger.svg';
+import CartIcon from '../../../public/shared/desktop/icon-cart.svg';
 
 function NavBar() {
   return (

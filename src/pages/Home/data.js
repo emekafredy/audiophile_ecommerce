@@ -1,31 +1,64 @@
-import BestGearDesktop from '../../assets/shared/desktop/image-best-gear.jpg';
-import BestGearTablet from '../../assets/shared/tablet/image-best-gear.jpg';
-import BestGearMobile from '../../assets/shared/mobile/image-best-gear.jpg';
+import HeadPhones from '../../public/shared/desktop/image-category-thumbnail-headphones.png';
+import Speakers from '../../public/shared/desktop/image-category-thumbnail-speakers.png';
+import Earphones from '../../public/shared/desktop/image-category-thumbnail-earphones.png';
+
+import HeroDesktop from '../../public/home/desktop/image-hero.png';
+import HeroMobile from '../../public/home/mobile/image-hero.jpg';
+
+import SpeakerZX9Desktop from '../../public/home/desktop/image-speaker-zx9.png';
+import SpeakerZX9Tablet from '../../public/home/tablet/image-speaker-zx9.png';
+import SpeakerZX9Mobile from '../../public/home/mobile/image-speaker-zx9.png';
+
+import SpeakerZX7Desktop from '../../public/home/desktop/image-speaker-zx7.jpg';
+import SpeakerZX7Tablet from '../../public/home/tablet/image-speaker-zx7.jpg';
+import SpeakerZX7Mobile from '../../public/home/mobile/image-speaker-zx7.jpg';
+
+import EarphoneYX1Desktop from '../../public/home/desktop/image-earphones-yx1.jpg';
+import EarphoneYX1Tablet from '../../public/home/tablet/image-earphones-yx1.jpg';
+import EarphoneYX1Mobile from '../../public/home/mobile/image-earphones-yx1.jpg';
+
+import BestGearDesktop from '../../public/shared/desktop/image-best-gear.jpg';
+import BestGearTablet from '../../public/shared/tablet/image-best-gear.jpg';
+import BestGearMobile from '../../public/shared/mobile/image-best-gear.jpg';
 
 export const categoriesData = [
   {
     id: '1',
     name: 'headphones',
-    image:
-      './src/assets/shared/desktop/image-category-thumbnail-headphones.png',
+    image: HeadPhones,
     alt: 'headphones',
   },
   {
     id: '2',
     name: 'speakers',
-    image: '/src/assets/shared/desktop/image-category-thumbnail-speakers.png',
+    image: Speakers,
     alt: 'speakers',
   },
   {
     id: '3',
     name: 'earphones',
-    image: '/src/assets/shared/desktop/image-category-thumbnail-earphones.png',
+    image: Earphones,
     alt: 'earphones',
   },
 ];
 
 export const landingPageData = {
-  hero: {},
+  hero: {
+    title1: 'New Product',
+    title2: 'xx99 mark ii headphones',
+    description:
+      'Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.',
+    cta: {
+      title: 'See Product',
+      link: 'xx99-markii-headphones',
+    },
+    image: {
+      desktop: HeroDesktop,
+      tablet: HeroDesktop,
+      mobile: HeroMobile,
+      alt: 'heaphone-xx99-mark-ii',
+    },
+  },
   productSectionI: {
     title: 'ZX9 speaker',
     description:
@@ -35,9 +68,9 @@ export const landingPageData = {
       link: 'zx9-speaker',
     },
     image: {
-      mobile: '/src/assets/home/mobile/image-speaker-zx9.png',
-      tablet: '/src/assets/home/tablet/image-speaker-zx9.png',
-      desktop: '/src/assets/home/desktop/image-speaker-zx9.png',
+      desktop: SpeakerZX9Desktop,
+      tablet: SpeakerZX9Tablet,
+      mobile: SpeakerZX9Mobile,
       alt: 'speaker-2x9',
     },
   },
@@ -48,9 +81,9 @@ export const landingPageData = {
       link: 'zx7-speaker',
     },
     image: {
-      mobile: '/src/assets/home/mobile/image-speaker-zx7.jpg',
-      tablet: '/src/assets/home/tablet/image-speaker-zx7.jpg',
-      desktop: '/src/assets/home/desktop/image-speaker-zx7.jpg',
+      desktop: SpeakerZX7Desktop,
+      tablet: SpeakerZX7Tablet,
+      mobile: SpeakerZX7Mobile,
       alt: 'earphones-yx1',
     },
   },
@@ -61,9 +94,9 @@ export const landingPageData = {
       link: 'yx1-earphones',
     },
     image: {
-      mobile: '/src/assets/home/mobile/image-earphones-yx1.jpg',
-      tablet: '/src/assets/home/tablet/image-earphones-yx1.jpg',
-      desktop: '/src/assets/home/desktop/image-earphones-yx1.jpg',
+      desktop: EarphoneYX1Desktop,
+      tablet: EarphoneYX1Tablet,
+      mobile: EarphoneYX1Mobile,
       alt: 'earphones-yx1',
     },
   },
@@ -76,9 +109,9 @@ export const audioGearData = {
   description:
     'Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.',
   image: {
-    mobile: BestGearMobile,
-    tablet: BestGearTablet,
     desktop: BestGearDesktop,
+    tablet: BestGearTablet,
+    mobile: BestGearMobile,
     alt: 'best-gear',
   },
 };

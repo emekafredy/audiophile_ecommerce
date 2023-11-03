@@ -13,7 +13,7 @@ function Home() {
 
   return (
     <>
-      <Hero />
+      <Hero data={landingPageData.hero} screenSize={screenSize} />
       <Categories data={categoriesData} />
       <ProductSectionI
         data={landingPageData.productSectionI}

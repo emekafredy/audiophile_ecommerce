@@ -6,7 +6,7 @@ function ProductSectionI({ data, screenSize }) {
   return (
     <div className="bg-white-200 pb-12">
       <div
-        className="bg-orange-200 bg-pattern-circles-svg bg-no-repeat
+        className="bg-orange-200 bg-[url('public/home/desktop/pattern-circles.svg')] bg-no-repeat
           md-max:bg-p-md lg-min:bg-p-lg xl-min:bg-p-xl 2xl-min:bg-p-2xl
           md-max:bg-size-md lg-min:bg-size-lg xl-min:bg-size-xl 2xl-min:bg-size-auto
           sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto rounded-lg
