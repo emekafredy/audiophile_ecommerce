@@ -24,7 +24,8 @@
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "no-underscore-dangle": 0,
     "react/jsx-wrap-multilines": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "react/jsx-one-expression-per-line": "off"
   },
   "overrides": [
     {

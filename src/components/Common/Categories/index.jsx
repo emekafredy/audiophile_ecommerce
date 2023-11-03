@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import Button from '../Button';
 import ArrowRightIcon from '../../../assets/shared/desktop/icon-arrow-right.svg';
-import categoriesData from './data';
 
-function Categories() {
+function Categories({ data }) {
   return (
     <div className="bg-white-200 pt-52 pb-36">
       <div
@@ -12,7 +12,7 @@ function Categories() {
           sm-max:gap-32 md-min:gap-2 lg-min:gap-4 xl-min:gap-10
           sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto xs-min:px-0 sm-min:px-20 md-min:px-0"
       >
-        {categoriesData.map((category) => {
+        {data.map((category) => {
           return (
             <div
               key={category.id}
@@ -47,5 +47,15 @@ function Categories() {
     </div>
   );
 }
+
+Categories.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
 
 export default Categories;

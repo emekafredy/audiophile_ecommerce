@@ -1,4 +1,30 @@
-const landingPageData = {
+import BestGearDesktop from '../../assets/shared/desktop/image-best-gear.jpg';
+import BestGearTablet from '../../assets/shared/tablet/image-best-gear.jpg';
+import BestGearMobile from '../../assets/shared/mobile/image-best-gear.jpg';
+
+export const categoriesData = [
+  {
+    id: '1',
+    name: 'headphones',
+    image:
+      './src/assets/shared/desktop/image-category-thumbnail-headphones.png',
+    alt: 'headphones',
+  },
+  {
+    id: '2',
+    name: 'speakers',
+    image: '/src/assets/shared/desktop/image-category-thumbnail-speakers.png',
+    alt: 'speakers',
+  },
+  {
+    id: '3',
+    name: 'earphones',
+    image: '/src/assets/shared/desktop/image-category-thumbnail-earphones.png',
+    alt: 'earphones',
+  },
+];
+
+export const landingPageData = {
   hero: {},
   productSectionI: {
     title: 'ZX9 speaker',
@@ -43,4 +69,16 @@ const landingPageData = {
   },
 };
 
-export default landingPageData;
+export const audioGearData = {
+  subTitle1: 'Bringing you the',
+  subTitle2: 'Best',
+  subTitle3: 'Audio gear',
+  description:
+    'Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.',
+  image: {
+    mobile: BestGearMobile,
+    tablet: BestGearTablet,
+    desktop: BestGearDesktop,
+    alt: 'best-gear',
+  },
+};
