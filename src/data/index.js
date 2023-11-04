@@ -25,7 +25,7 @@ export const menuItems = [
   { id: '1', title: 'home' },
   { id: '2', title: 'headphones' },
   { id: '3', title: 'speakers' },
-  { id: '4', title: 'sarphones' },
+  { id: '4', title: 'earphones' },
 ];
 
 export const categoriesData = [
@@ -51,75 +51,63 @@ export const categoriesData = [
 
 export const landingPageData = {
   hero: {
-    title1: 'New Product',
-    title2: 'xx99 mark ii headphones',
+    name: 'New Product',
+    name2: 'xx99 mark ii headphones',
     description:
       'Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.',
-    cta: {
-      title: 'See Product',
-      link: 'xx99-markii-headphones',
-    },
+    slug: 'xx99-mark-two-headphones',
+    cta: 'See Product',
     image: {
       desktop: HeroDesktop,
       tablet: HeroDesktop,
       mobile: HeroMobile,
-      alt: 'heaphone-xx99-mark-ii',
     },
   },
   productSectionI: {
-    title: 'ZX9 speaker',
+    name: 'ZX9 speaker',
     description:
       'Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.',
-    cta: {
-      title: 'See Product',
-      link: 'zx9-speaker',
-    },
+    slug: 'zx9-speaker',
+    cta: 'See Product',
     image: {
       desktop: SpeakerZX9Desktop,
       tablet: SpeakerZX9Tablet,
       mobile: SpeakerZX9Mobile,
-      alt: 'speaker-2x9',
     },
   },
   productSectionII: {
-    title: 'ZX7 speaker',
-    cta: {
-      title: 'See Product',
-      link: 'zx7-speaker',
-    },
+    name: 'ZX7 speaker',
+    slug: 'zx7-speaker',
+    cta: 'See Product',
     image: {
       desktop: SpeakerZX7Desktop,
       tablet: SpeakerZX7Tablet,
       mobile: SpeakerZX7Mobile,
-      alt: 'earphones-yx1',
     },
   },
   productSectionIII: {
-    title: 'Yx1 Earphones',
-    cta: {
-      title: 'See Product',
-      link: 'yx1-earphones',
-    },
+    name: 'Yx1 Earphones',
+    slug: 'yx1-earphones',
+    cta: 'See Product',
     image: {
       desktop: EarphoneYX1Desktop,
       tablet: EarphoneYX1Tablet,
       mobile: EarphoneYX1Mobile,
-      alt: 'earphones-yx1',
     },
   },
 };
 
 export const audioGearData = {
-  subTitle1: 'Bringing you the',
-  subTitle2: 'Best',
-  subTitle3: 'Audio gear',
+  name: 'Bringing you the',
+  name2: 'Best',
+  name3: 'Audio gear',
+  slug: '',
   description:
     'Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.',
-  image: {
+  categoryImage: {
     desktop: BestGearDesktop,
     tablet: BestGearTablet,
     mobile: BestGearMobile,
-    alt: 'best-gear',
   },
 };
 
@@ -127,8 +115,20 @@ export const footerData = {
   body: "Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we're open 7 days a week.",
   copyright: `Copyright 2021. All Rights Reserved`,
   smPlatforms: [
-    { id: '1', name: 'twitter', url: 'www.twitter.com' },
-    { id: '2', name: 'facebook', url: 'www.facebook.com' },
-    { id: '3', name: 'instagram', url: 'www.instagram.com' },
+    {
+      id: '1',
+      name: 'twitter',
+      url: 'www.twitter.com',
+    },
+    {
+      id: '2',
+      name: 'facebook',
+      url: 'www.facebook.com',
+    },
+    {
+      id: '3',
+      name: 'instagram',
+      url: 'www.instagram.com',
+    },
   ],
 };

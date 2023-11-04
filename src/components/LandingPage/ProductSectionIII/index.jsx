@@ -8,13 +8,13 @@ function ProductSectionIII({ data, screenSize }) {
       <div
         className="grid xs-max:grid-cols-1 sm-min:grid-cols-2
           xs-max:gap-4 sm-min:gap-2 md-min:gap-4 lg-min:gap-12 xl-min:gap-16 2xl-min:gap-24
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto"
+          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto"
       >
         <div className="sm-max:h-[200px] md-min:h-[320px]">
           <img
             src={data.image[`${screenSize}`]}
             className="w-full sm-max:h-[200px] md-min:h-[320px] rounded-lg"
-            alt={data.image.alt}
+            alt={data.slug}
           />
         </div>
         <div
@@ -23,17 +23,17 @@ function ProductSectionIII({ data, screenSize }) {
             sm-max:pt-12 md-min:pt-20"
         >
           <p className="sm-min:text-md md-min:text-xl font-bold uppercase leading-38 tracking-lg mb-6">
-            {data.title}
+            {data.name}
           </p>
           <Button
             transparentBlack
             hasIcon
             content={
               <Link
-                to={`/${data.cta.link}`}
+                to={`/product/${data.slug}`}
                 className="uppercase text-xs font-bold leading-19"
               >
-                {data.cta.title}
+                {data.cta}
               </Link>
             }
           />
@@ -45,16 +45,13 @@ function ProductSectionIII({ data, screenSize }) {
 
 ProductSectionIII.propTypes = {
   data: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    cta: PropTypes.string.isRequired,
     image: PropTypes.shape({
       desktop: PropTypes.string.isRequired,
       tablet: PropTypes.string.isRequired,
       mobile: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-    }).isRequired,
-    title: PropTypes.string.isRequired,
-    cta: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      link: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
   screenSize: PropTypes.string.isRequired,

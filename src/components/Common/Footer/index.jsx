@@ -1,7 +1,13 @@
-import { Link, useParams } from 'react-router-dom';
+import {
+  Link,
+  useParams,
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Logo from '../../../public/shared/desktop/logo.svg';
-import { menuItems, footerData } from '../../../data';
+import {
+  menuItems,
+  footerData,
+} from '../../../data';
 import Socials from './Socials';
 import { setActiveLinkColor } from '../../../helpers';
 
@@ -16,7 +22,7 @@ function Footer({ prodCategory }) {
         text-white-100
         w-full"
     >
-      <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto">
+      <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto">
         <div className="flex flex-col xs-max:items-center sm-min:items-start">
           <div className="h-1 w-24 bg-orange-200" />
         </div>
@@ -36,8 +42,12 @@ function Footer({ prodCategory }) {
                 className="xs-max:block sm-min:inline font-semibold text-xs xs-max:mb-4"
               >
                 <Link
-                  to={item.title === 'home' ? '/' : `/${item.title}`}
-                  className={`sm-min:mr-4 md-min:mr-0 md-min:ml-4 lg-min:ml-6 xl-min:ml-16
+                  to={
+                    item.title === 'home'
+                      ? '/'
+                      : `/${item.title}`
+                  }
+                  className={`sm-min:mr-4 md-min:mr-0 md-min:ml-4 xl-min:ml-8
                     uppercase ${setActiveLinkColor(
                       item.title,
                       category,
