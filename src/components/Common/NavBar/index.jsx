@@ -4,9 +4,9 @@ import {
   Link,
   useParams,
 } from 'react-router-dom';
-import Logo from '../../../public/shared/desktop/logo.svg';
-import HamburgerIcon from '../../../public/shared/tablet/icon-hamburger.svg';
-import CartIcon from '../../../public/shared/desktop/icon-cart.svg';
+import Logo from '../../../../public/shared/desktop/logo.svg';
+import HamburgerIcon from '../../../../public/shared/tablet/icon-hamburger.svg';
+import CartIcon from '../../../../public/shared/desktop/icon-cart.svg';
 import { menuItems } from '../../../data';
 import { setActiveLinkColor } from '../../../helpers';
 
