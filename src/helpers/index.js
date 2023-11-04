@@ -10,6 +10,16 @@ export const getScreenSize = (screenSize) => {
   return 'desktop';
 };
 
-export const newData = {
-  lost: false,
+export const setActiveLinkColor = (title, category, prodCategory) => {
+  if (category && prodCategory === title) {
+    return 'text-orange-200';
+  }
+  if (
+    (category === undefined || category === null || category === '') &&
+    title === 'home'
+  ) {
+    return 'text-orange-200';
+  }
+
+  return 'text-white-100';
 };

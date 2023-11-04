@@ -25,7 +25,10 @@
     "no-underscore-dangle": 0,
     "react/jsx-wrap-multilines": "off",
     "arrow-body-style": "off",
-    "react/jsx-one-expression-per-line": "off"
+    "react/jsx-one-expression-per-line": "off",
+    "indent": "off",
+    "operator-linebreak": "off",
+    "quotes": "off"
   },
   "overrides": [
     {

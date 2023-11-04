@@ -1,10 +1,16 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Button from '../Button';
 import ArrowRightIcon from '../../../public/shared/desktop/icon-arrow-right.svg';
 
 function Categories({ data }) {
+  const navigate = useNavigate();
+
+  function navigateCategory(name) {
+    navigate(`/${name}`);
+  }
+
   return (
     <div className="bg-white-200 pt-52 pb-36">
       <div
@@ -15,8 +21,13 @@ function Categories({ data }) {
         {data.map((category) => {
           return (
             <div
+              role="button"
+              tabIndex={Number(category.id)}
               key={category.id}
-              className="text-center bg-gray-100 rounded-lg"
+              className="text-center bg-gray-100 rounded-lg text-black-200
+                hover:text-orange-200 hover:opacity-100 cursor-pointer"
+              onClick={() => navigateCategory(category.name)}
+              onKeyDown={() => navigateCategory(category.name)}
             >
               <img
                 src={category.image}
@@ -24,19 +35,15 @@ function Categories({ data }) {
                   m-auto sm-max:-mt-20 md-min:-mt-16 lg-min:-mt-18 xl-min:-mt-20 text-center"
                 alt={category.alt}
               />
-              <p className="uppercase text-md font-bold leading-25 tracking-sm mb-2">
+              <p className="uppercase text-md font-bold leading-25 tracking-sm mb-2 text-black-200 hover:text-black-200">
                 {category.name}
               </p>
               <Button
-                transparent
                 hasIcon
                 content={
-                  <Link
-                    to={`/${category.name}`}
-                    className="uppercase text-xs font-bold leading-19 text-black-200 opacity-50 mr-2 hover:text-orange-200 hover:opacity-100"
-                  >
+                  <p className="uppercase text-xs font-bold leading-19 mr-2 opacity-70">
                     Shop
-                  </Link>
+                  </p>
                 }
                 rightIcon={<img src={ArrowRightIcon} alt="arrow-right" />}
               />

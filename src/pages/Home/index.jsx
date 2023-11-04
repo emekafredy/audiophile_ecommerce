@@ -6,7 +6,7 @@ import ProductSectionIII from '../../components/LandingPage/ProductSectionIII';
 import AudioGear from '../../components/Common/AudioGear';
 import useScreenSize from '../../hooks/useScreenSize';
 
-import { landingPageData, categoriesData, audioGearData } from './data';
+import { landingPageData, categoriesData, audioGearData } from '../../data';
 
 function Home() {
   const { screenSize } = useScreenSize();

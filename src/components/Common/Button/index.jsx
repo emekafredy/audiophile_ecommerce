@@ -20,8 +20,8 @@ function Button({
   transparentBlack,
 }) {
   const classes = className(
-    `xs-min:text-xs md-min:text-sm font-semibold transition
-    duration-300 disabled:opacity-50 px-7 py-3 disabled:cursor-not-allowed ${extraClasses}`,
+    `xs-min:text-xs md-min:text-sm font-semibold transition-full
+    duration-500 disabled:opacity-50 px-7 py-3 disabled:cursor-not-allowed ${extraClasses}`,
     {
       'w-full': fullwidth,
       rounded,

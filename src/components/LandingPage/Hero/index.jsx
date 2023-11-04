@@ -7,7 +7,7 @@ function Hero({ data, screenSize }) {
     <div className="bg-black-100">
       <div
         className="lg-min:flex lg-min:flex-wrap lg-min:items-center lg-min:justify-between
-        md-max:bg-hero-tablet bg-no-repeat bg-cover bg-center
+        md-max:bg-[url('public/home/tablet/image-hero.png')] bg-no-repeat bg-cover bg-center
         lg-min:w-[77%] m-auto sm-max:h-[800px] md-min:h-[700px] lg-min:h-auto"
       >
         <div

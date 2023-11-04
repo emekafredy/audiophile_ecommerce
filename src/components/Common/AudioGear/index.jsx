@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function AudioGear({ data, screenSize }) {
   return (
-    <div className="bg-white-200 pb-12 pt-28">
+    <div className="bg-white-200 pb-48 pt-30">
       <div
         className="flex flex-wrap items-center justify-between
           sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto"
