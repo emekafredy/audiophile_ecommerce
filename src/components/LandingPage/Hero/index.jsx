@@ -8,7 +8,7 @@ function Hero({ data, screenSize }) {
       <div
         className="lg-min:flex lg-min:flex-wrap lg-min:items-center lg-min:justify-between
         md-max:bg-[url('public/home/tablet/image-hero.png')] bg-no-repeat bg-cover bg-center
-        lg-min:w-[77%] m-auto sm-max:h-[800px] md-min:h-[700px] lg-min:h-auto"
+        lg-min:w-[70%] m-auto sm-max:h-[800px] md-min:h-[700px] lg-min:h-auto"
       >
         <div
           className="md-max:w-[100%] lg-min:w-[40%]
@@ -19,13 +19,13 @@ function Hero({ data, screenSize }) {
             className="text-white-100 opacity-50 leading-19
             tracking-xl font-regular text-sm uppercase mb-6"
           >
-            {data.title1}
+            {data.name}
           </p>
           <p
             className="text-white-100 font-bold uppercase
             xs-max:text-xl sm-min:text-2xl md-min:text-3xl xl-min:text-4xl leading-58 tracking-lg mb-6"
           >
-            {data.title2}
+            {data.name2}
           </p>
 
           <p className="text-white-100 opacity-75 text-smii mb-8">
@@ -36,10 +36,10 @@ function Hero({ data, screenSize }) {
             uppercase
             content={
               <Link
-                to={`/${data.cta.link}`}
+                to={`/product/${data.slug}`}
                 className="uppercase text-xs font-bold leading-19"
               >
-                {data.cta.title}
+                {data.cta}
               </Link>
             }
           />
@@ -49,7 +49,7 @@ function Hero({ data, screenSize }) {
           <img
             src={data.image[`${screenSize}`]}
             className="h-full w-full"
-            alt={data.image.alt}
+            alt={data.slug}
           />
         </div>
       </div>
@@ -59,18 +59,15 @@ function Hero({ data, screenSize }) {
 
 Hero.propTypes = {
   data: PropTypes.shape({
-    title1: PropTypes.string.isRequired,
-    title2: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    name2: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    cta: PropTypes.string.isRequired,
     image: PropTypes.shape({
       desktop: PropTypes.string.isRequired,
       tablet: PropTypes.string.isRequired,
       mobile: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-    }).isRequired,
-    cta: PropTypes.shape({
-      link: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
   screenSize: PropTypes.string.isRequired,

@@ -9,7 +9,7 @@ function ProductSectionI({ data, screenSize }) {
         className="bg-orange-200 bg-[url('public/home/desktop/pattern-circles.svg')] bg-no-repeat
           md-max:bg-p-md lg-min:bg-p-lg xl-min:bg-p-xl 2xl-min:bg-p-2xl
           md-max:bg-size-md lg-min:bg-size-lg xl-min:bg-size-xl 2xl-min:bg-size-auto
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto rounded-lg
+          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto rounded-lg
           md-max:h-[720px] lg-min:h-[560px] overflow-hidden"
       >
         <div
@@ -21,7 +21,7 @@ function ProductSectionI({ data, screenSize }) {
               src={data.image[`${screenSize}`]}
               className="md-max:h-auto lg-min:h-104 xl-min:h-auto
                 md-max:w-60 lg-min:w-82 xl-min:w-96 m-auto"
-              alt={data.image.alt}
+              alt={data.slug}
             />
           </div>
 
@@ -34,7 +34,7 @@ function ProductSectionI({ data, screenSize }) {
               className="text-white-100 font-bold uppercase xs-max:text-xl sm-min:text-3xl md-min:text-4xl
               sm-max:leading-33 md-min:leading-58 tracking-lg mb-4"
             >
-              {data.title}
+              {data.name}
             </p>
 
             <p className="text-white-100 opacity-75 xs-max:text-xs sm-min:text-smii mb-6">
@@ -45,10 +45,10 @@ function ProductSectionI({ data, screenSize }) {
               hasIcon
               content={
                 <Link
-                  to={`/${data.cta.link}`}
+                  to={`/product/${data.slug}`}
                   className="uppercase text-xs font-bold leading-19"
                 >
-                  {data.cta.title}
+                  {data.cta}
                 </Link>
               }
             />
@@ -61,17 +61,14 @@ function ProductSectionI({ data, screenSize }) {
 
 ProductSectionI.propTypes = {
   data: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    cta: PropTypes.string.isRequired,
     image: PropTypes.shape({
       desktop: PropTypes.string.isRequired,
       tablet: PropTypes.string.isRequired,
       mobile: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-    }).isRequired,
-    cta: PropTypes.shape({
-      link: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
   screenSize: PropTypes.string.isRequired,

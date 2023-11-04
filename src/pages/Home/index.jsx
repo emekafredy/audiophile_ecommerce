@@ -6,14 +6,21 @@ import ProductSectionIII from '../../components/LandingPage/ProductSectionIII';
 import AudioGear from '../../components/Common/AudioGear';
 import useScreenSize from '../../hooks/useScreenSize';
 
-import { landingPageData, categoriesData, audioGearData } from '../../data';
+import {
+  landingPageData,
+  categoriesData,
+  audioGearData,
+} from '../../data';
 
 function Home() {
   const { screenSize } = useScreenSize();
 
   return (
     <>
-      <Hero data={landingPageData.hero} screenSize={screenSize} />
+      <Hero
+        data={landingPageData.hero}
+        screenSize={screenSize}
+      />
       <Categories data={categoriesData} />
       <ProductSectionI
         data={landingPageData.productSectionI}
@@ -27,7 +34,11 @@ function Home() {
         data={landingPageData.productSectionIII}
         screenSize={screenSize}
       />
-      <AudioGear data={audioGearData} screenSize={screenSize} />
+      <AudioGear
+        data={audioGearData}
+        screenSize={screenSize}
+        extraClasses="pt-24 pb-32"
+      />
     </>
   );
 }

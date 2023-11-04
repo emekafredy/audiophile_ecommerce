@@ -1,13 +1,19 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Link, useParams } from 'react-router-dom';
+import {
+  Link,
+  useParams,
+} from 'react-router-dom';
 import Logo from '../../../public/shared/desktop/logo.svg';
 import HamburgerIcon from '../../../public/shared/tablet/icon-hamburger.svg';
 import CartIcon from '../../../public/shared/desktop/icon-cart.svg';
 import { menuItems } from '../../../data';
 import { setActiveLinkColor } from '../../../helpers';
 
-function NavBar({ prodCategory, setProdCategory }) {
+function NavBar({
+  prodCategory,
+  setProdCategory,
+}) {
   const { category } = useParams();
 
   useEffect(() => {
@@ -25,23 +31,37 @@ function NavBar({ prodCategory, setProdCategory }) {
         text-white-100
         w-full"
     >
-      <nav className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto flex justify-between items-center py-8">
+      <nav className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto flex justify-between items-center py-8">
         <div className="md-min:hidden flex justify-between items-center">
-          <img src={HamburgerIcon} alt="menu" className="mr-10" />
+          <img
+            src={HamburgerIcon}
+            alt="menu"
+            className="mr-10"
+          />
           <Link to="/" className="xs-max:hidden">
             <img src={Logo} alt="app-logo" />
           </Link>
         </div>
 
-        <Link to="/" className="xs-max:block sm-min:hidden md-min:block">
+        <Link
+          to="/"
+          className="xs-max:block sm-min:hidden md-min:block"
+        >
           <img src={Logo} alt="app-logo" />
         </Link>
 
         <ul className="sm-max:hidden">
           {menuItems.map((item) => (
-            <li key={item.id} className="inline font-semibold text-xs">
+            <li
+              key={item.id}
+              className="inline font-semibold text-xs"
+            >
               <Link
-                to={item.title === 'home' ? '/' : `/${item.title}`}
+                to={
+                  item.title === 'home'
+                    ? '/'
+                    : `/${item.title}`
+                }
                 className={`md-min:mx-2 lg-min:mx-3 xl-min:mx-8 uppercase
                   ${setActiveLinkColor(
                     item.title,
@@ -56,10 +76,10 @@ function NavBar({ prodCategory, setProdCategory }) {
         </ul>
 
         <Link to="/cart" className="">
-          <img src={CartIcon} alt="app-logo" />
+          <img src={CartIcon} alt="cart-icon" />
         </Link>
       </nav>
-      <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[77%] m-auto border-b border-white-100 opacity-10 md-min:opacity-20" />
+      <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto border-b border-white-100 opacity-10 md-min:opacity-20" />
     </div>
   );
 }
