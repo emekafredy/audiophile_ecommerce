@@ -1,7 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit';
+// import { configureStore } from '@reduxjs/toolkit';
+// import screenSizeReducer from './slices/screenSize';
 
-const store = configureStore({
-  reducer: {},
-});
+// const store = configureStore({
+//   reducer: { screenSize: screenSizeReducer },
+// });
 
-export default store;
+// export default store;

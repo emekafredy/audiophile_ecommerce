@@ -5,13 +5,15 @@ export default {
     screens: {
       'xs-min': '0px',
       'sm-min': '476px',
-      'md-min': '769px',
+      'md-min': '768px',
       'lg-min': '969px',
       'xl-min': '1200px',
+      '2xl-min': '1600px',
       'xs-max': { max: '475px' },
-      'sm-max': { max: '768px' },
+      'sm-max': { max: '767px' },
       'md-max': { max: '968px' },
-      'lg-max': { max: '1999px' },
+      'lg-max': { max: '1199px' },
+      'xl-max': { max: '1599px' },
     },
     colors: {
       white: {
@@ -21,6 +23,7 @@ export default {
       gray: {
         100: '#F1F1F1',
         200: '#979797',
+        300: '#4C4C4C',
       },
       black: {
         100: '#101010',
@@ -37,6 +40,7 @@ export default {
     fontSize: {
       xs: '13px',
       sm: '14px',
+      smii: '15px',
       md: '18px',
       lg: '24px',
       xl: '28px',
@@ -61,6 +65,43 @@ export default {
         38: '38px',
         44: '44px',
         58: '58px',
+      },
+      backgroundImage: {
+        'desktop-hero': 'url(src/public/home/desktop/image-hero.jpg)',
+        'hero-tablet': 'url(src/public/home/tablet/image-hero.png)',
+        'pattern-circles-svg':
+          'url(src/public/home/desktop/pattern-circles.svg)',
+      },
+      backgroundSize: {
+        auto: 'auto',
+        cover: 'cover',
+        contain: 'contain',
+        'size-xl': '65rem 65rem',
+        'size-lg': '50rem 50rem',
+        'size-md': '55rem 55rem',
+        'zx9-size-md': '10rem 25rem',
+      },
+      backgroundPosition: {
+        'p-2xl': '-8rem -1rem',
+        'p-xl': '-11rem -1rem',
+        'p-lg': '-9rem -1rem',
+        'p-md': 'center -15rem',
+      },
+      margin: {
+        'auto-0': '0',
+      },
+      padding: {
+        29: '7.25rem',
+        30: '7.50rem',
+        31: '7.75rem',
+      },
+      width: {
+        81: '20.25rem',
+        82: '20.50rem',
+        83: '20.75rem',
+      },
+      height: {
+        104: '26rem',
       },
     },
   },
