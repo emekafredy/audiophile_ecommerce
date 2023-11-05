@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Button from '../Button';
-import ArrowRightIcon from '../../../../public/shared/desktop/icon-arrow-right.svg';
+import ArrowRightIcon from '../../../assets/shared/desktop/icon-arrow-right.svg';
 
 function Categories({ data }) {
   const navigate = useNavigate();
