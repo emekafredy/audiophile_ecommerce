@@ -3,7 +3,7 @@ import {
   useParams,
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Logo from '../../../public/shared/desktop/logo.svg';
+import Logo from '../../../assets/shared/desktop/logo.svg';
 import {
   menuItems,
   footerData,

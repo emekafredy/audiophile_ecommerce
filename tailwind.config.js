@@ -67,10 +67,12 @@ export default {
         58: '58px',
       },
       backgroundImage: {
-        'desktop-hero': 'url(src/public/home/desktop/image-hero.jpg)',
-        'hero-tablet': 'url(src/public/home/tablet/image-hero.png)',
+        'desktop-hero':
+          'url(src/public/home/desktop/image-hero.jpg)',
+        'hero-tablet':
+          'url(src/public/home/tablet/image-hero.png)',
         'pattern-circles-svg':
-          'url(src/public/home/desktop/pattern-circles.svg)',
+          'url(public/home/desktop/pattern-circles.svg)',
       },
       backgroundSize: {
         auto: 'auto',
