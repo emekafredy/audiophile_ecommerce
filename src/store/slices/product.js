@@ -15,6 +15,24 @@ const initialState = {
     quantity: 0,
     features: '',
     includes: [],
+    gallery: {
+      first: {
+        desktop: '',
+        tablet: '',
+        mobile: '',
+      },
+      second: {
+        desktop: '',
+        tablet: '',
+        mobile: '',
+      },
+      third: {
+        desktop: '',
+        tablet: '',
+        mobile: '',
+      },
+    },
+    others: [],
   },
 };
 

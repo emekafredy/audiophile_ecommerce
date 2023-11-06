@@ -10,7 +10,11 @@ import {
 import { getProductsState } from '../../store/slices/product';
 import ProductSummarySection from '../../components/Common/ProductSummarySection';
 import { categoriesData, audioGearData } from '../../data';
-import { Features } from '../../components/ProductDetails';
+import {
+  Features,
+  Images,
+  OtherProducts,
+} from '../../components/ProductDetails';
 
 function Product() {
   const { screenSize } = useScreenSize();
@@ -45,6 +49,17 @@ function Product() {
           <Features
             features={product.features}
             includes={product.includes}
+          />
+
+          <Images
+            gallery={product.gallery}
+            screenSize={screenSize}
+            name={product.name}
+          />
+
+          <OtherProducts
+            otherProducts={product.others}
+            screenSize={screenSize}
           />
         </>
       )}
