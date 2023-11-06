@@ -33,7 +33,9 @@
     "operator-linebreak": "off",
     "quotes": "off",
     "implicit-arrow-linebreak": "off",
-    "react/jsx-curly-newline": "off"
+    "react/jsx-curly-newline": "off",
+    "import/no-cycle": "off",
+    "object-curly-newline": "off"
   },
   "overrides": [
     {

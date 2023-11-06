@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import getProductsByCategory from '../crud/products';
+import { getProductsByCategory } from '../crud/products';
 import { setProducts } from '../store/slices/product';
 
 function useFetchProductsByCategory() {
@@ -12,8 +12,7 @@ function useFetchProductsByCategory() {
   useEffect(() => {
     const getProducts = async () => {
       setLoading(true);
-      const data =
-        await getProductsByCategory(category);
+      const data = await getProductsByCategory(category);
 
       await dispatch(setProducts(data.data));
       setLoading(false);

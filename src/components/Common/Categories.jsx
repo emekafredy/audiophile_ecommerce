@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Button from '../Button';
-import ArrowRightIcon from '../../../assets/shared/desktop/icon-arrow-right.svg';
+import { Button } from '.';
+import ArrowRightIcon from '../../assets/shared/desktop/icon-arrow-right.svg';
 
 function Categories({ data }) {
   const navigate = useNavigate();
@@ -14,24 +14,19 @@ function Categories({ data }) {
   return (
     <div className="bg-white-200 pt-52 pb-36">
       <div
-        className="grid sm-max:grid-cols-1 md-min:grid-cols-3
-          sm-max:gap-32 md-min:gap-2 lg-min:gap-4 xl-min:gap-10
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto xs-min:px-0 sm-min:px-20 md-min:px-0"
+        className="flex sm-max:flex-col md-min:flex-row sm-max:gap-32 md-min:gap-4 lg-min:gap-8 items-center justify-between
+          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto"
       >
-        {data.map((category) => {
+        {data?.map((category) => {
           return (
             <div
+              key={category.id}
               role="button"
               tabIndex={Number(category.id)}
-              key={category.id}
               className="text-center bg-gray-100 rounded-lg text-black-200
-                hover:text-orange-200 hover:opacity-100 cursor-pointer"
-              onClick={() =>
-                navigateCategory(category.name)
-              }
-              onKeyDown={() =>
-                navigateCategory(category.name)
-              }
+            hover:text-orange-200 hover:opacity-100 cursor-pointer w-[100%]"
+              onClick={() => navigateCategory(category.name)}
+              onKeyDown={() => navigateCategory(category.name)}
             >
               <img
                 src={category.image}
@@ -50,10 +45,7 @@ function Categories({ data }) {
                   </p>
                 }
                 rightIcon={
-                  <img
-                    src={ArrowRightIcon}
-                    alt="arrow-right"
-                  />
+                  <img src={ArrowRightIcon} alt="arrow-right" />
                 }
               />
             </div>

@@ -23,7 +23,8 @@ export default {
       gray: {
         100: '#F1F1F1',
         200: '#979797',
-        300: '#4C4C4C',
+        300: '#D8D8D8',
+        400: '#4C4C4C',
       },
       black: {
         100: '#101010',
@@ -32,6 +33,9 @@ export default {
       orange: {
         100: '#FBAF85',
         200: '#D87D4A',
+      },
+      red: {
+        100: '#FF0000',
       },
     },
     fontFamily: {
@@ -67,10 +71,8 @@ export default {
         58: '58px',
       },
       backgroundImage: {
-        'desktop-hero':
-          'url(src/public/home/desktop/image-hero.jpg)',
-        'hero-tablet':
-          'url(src/public/home/tablet/image-hero.png)',
+        'desktop-hero': 'url(src/public/home/desktop/image-hero.jpg)',
+        'hero-tablet': 'url(src/public/home/tablet/image-hero.png)',
         'pattern-circles-svg':
           'url(public/home/desktop/pattern-circles.svg)',
       },
