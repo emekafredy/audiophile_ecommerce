@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Button from '../Button';
-import ArrowRightIcon from '../../../assets/shared/desktop/icon-arrow-right.svg';
+import { Button } from '.';
+import ArrowRightIcon from '../../assets/shared/desktop/icon-arrow-right.svg';
 
 function Categories({ data }) {
   const navigate = useNavigate();
@@ -26,12 +26,8 @@ function Categories({ data }) {
               key={category.id}
               className="text-center bg-gray-100 rounded-lg text-black-200
                 hover:text-orange-200 hover:opacity-100 cursor-pointer"
-              onClick={() =>
-                navigateCategory(category.name)
-              }
-              onKeyDown={() =>
-                navigateCategory(category.name)
-              }
+              onClick={() => navigateCategory(category.name)}
+              onKeyDown={() => navigateCategory(category.name)}
             >
               <img
                 src={category.image}
@@ -50,10 +46,7 @@ function Categories({ data }) {
                   </p>
                 }
                 rightIcon={
-                  <img
-                    src={ArrowRightIcon}
-                    alt="arrow-right"
-                  />
+                  <img src={ArrowRightIcon} alt="arrow-right" />
                 }
               />
             </div>

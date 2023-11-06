@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types';
 
-function NoData({ message }) {
+function EmptyState({ message }) {
   return (
     <div className="flex items-center justify-center h-60 bg-white-200">
-      <p className="text-black-200 opacity-75 text-lg">
-        {message}
-      </p>
+      <p className="text-black-200 opacity-75 text-lg">{message}</p>
     </div>
   );
 }
 
-NoData.propTypes = {
+EmptyState.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-export default NoData;
+export default EmptyState;

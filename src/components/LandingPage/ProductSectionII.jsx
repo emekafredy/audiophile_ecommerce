@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Button from '../../Common/Button';
+import { Button } from '../Common';
 
 function ProductSectionII({ data, screenSize }) {
   return (

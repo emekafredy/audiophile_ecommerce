@@ -1,26 +1,28 @@
 import PropTypes from 'prop-types';
-import ProductDetailsSection from '../ProductDetailsSection';
+import ProductSummarySection from './ProductSummarySection';
 
-function AudioGear({
-  data,
-  screenSize,
-  extraClasses,
-}) {
+function AudioGear({ data, screenSize, classExtension }) {
   return (
-    <ProductDetailsSection
-      hasCTA={false}
+    <ProductSummarySection
       isEven={false}
       newProduct={false}
       data={data}
+      name={data.name}
+      name2={data.name2}
+      name3={data.name3}
+      description={data.description}
+      slug={data.slug}
+      image={data.image}
       screenSize={screenSize}
-      extraClasses={extraClasses}
+      classExtension={classExtension}
+      wrapAtMdWidth
     />
   );
 }
 
 AudioGear.propTypes = {
   data: PropTypes.shape({
-    categoryImage: PropTypes.shape({
+    image: PropTypes.shape({
       desktop: PropTypes.string.isRequired,
       tablet: PropTypes.string.isRequired,
       mobile: PropTypes.string.isRequired,
@@ -32,7 +34,7 @@ AudioGear.propTypes = {
     slug: PropTypes.string.isRequired,
   }).isRequired,
   screenSize: PropTypes.string.isRequired,
-  extraClasses: PropTypes.string.isRequired,
+  classExtension: PropTypes.string.isRequired,
 };
 
 export default AudioGear;

@@ -14,14 +14,14 @@ function Button({
   handleClick,
   disabled,
   uppercase,
-  extraClasses,
+  classExtension,
   rightIcon,
   hasIcon,
   transparentBlack,
 }) {
   const classes = className(
     `xs-min:text-xs md-min:text-sm font-semibold transition-full
-    duration-500 disabled:opacity-50 px-7 py-3 disabled:cursor-not-allowed ${extraClasses}`,
+    duration-500 disabled:opacity-50 px-7 py-3 disabled:cursor-not-allowed ${classExtension}`,
     {
       'w-full': fullwidth,
       rounded,
@@ -30,9 +30,10 @@ function Button({
       'bg-orange-200 text-white-100 hover:bg-orange-100': primary,
       'bg-white-100 text-black-200 border border-black-200 hover:bg-black-100 hover:text-white-100':
         secondary,
-      'bg-black-200 text-white-100 hover:bg-gray-300 hover:text-white-100':
+      'bg-black-200 text-white-100 hover:bg-gray-400 hover:text-white-100':
         black,
-      'bg-transparent text-gray-100 hover:text-orange-200': transparent,
+      'bg-transparent text-gray-100 hover:text-orange-200':
+        transparent,
       'bg-transparent text-black-200 border border-black-200 hover:text-white-100 hover:bg-black-200':
         transparentBlack,
       'inline-flex items-center': hasIcon,
@@ -64,7 +65,7 @@ Button.propTypes = {
   handleClick: PropTypes.func,
   disabled: PropTypes.bool,
   uppercase: PropTypes.bool,
-  extraClasses: PropTypes.string,
+  classExtension: PropTypes.string,
   rightIcon: PropTypes.any,
   hasIcon: PropTypes.bool,
   transparentBlack: PropTypes.bool,
@@ -81,7 +82,7 @@ Button.defaultProps = {
   handleClick: () => {},
   disabled: false,
   uppercase: false,
-  extraClasses: '',
+  classExtension: '',
   rightIcon: '',
   hasIcon: false,
   transparentBlack: false,

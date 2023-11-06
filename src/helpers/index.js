@@ -15,11 +15,18 @@ export const setActiveLinkColor = (title, category, prodCategory) => {
     return 'text-orange-200';
   }
   if (
-    (category === undefined || category === null || category === '') &&
+    (category === undefined ||
+      category === null ||
+      category === '') &&
     title === 'home'
   ) {
     return 'text-orange-200';
   }
 
   return 'text-white-100';
+};
+
+export const formatAndSeparateNumber = (num) => {
+  const str = num?.toString() || '';
+  return str.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };
