@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function Features({ features, includes }) {
   return (
-    <div className="bg-white-200 pt-32">
+    <div className="pt-32">
       <div
         className="flex
           sm-max:flex-col md-min:flex-row sm-max:gap-12 md-min:gap-28

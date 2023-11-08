@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '..';
 import AddToCartSection from './AddToCartSection';
 
@@ -14,10 +14,9 @@ function SummaryCard({
   slug,
   price,
   cartSection,
-  quantity,
-  setQuantity,
   productQuantity,
 }) {
+  const navigate = useNavigate();
   return (
     <>
       {newProduct && (
@@ -41,15 +40,10 @@ function SummaryCard({
         <Button
           primary
           uppercase
-          content={
-            <Link
-              to={`/product/${slug}`}
-              className="uppercase text-xs font-bold leading-19"
-            >
-              {btnTitle}
-            </Link>
-          }
+          content={btnTitle}
           classExtension="mt-8"
+          paddedX
+          handleClick={() => navigate(`/product/${slug}`)}
         />
       )}
 
@@ -57,9 +51,9 @@ function SummaryCard({
         <AddToCartSection
           btnTitle={btnTitle}
           price={price}
-          quantity={quantity}
-          setQuantity={setQuantity}
           productQuantity={productQuantity}
+          name={name}
+          slug={slug}
         />
       )}
     </>
@@ -77,8 +71,6 @@ SummaryCard.propTypes = {
   slug: PropTypes.string.isRequired,
   price: PropTypes.number,
   cartSection: PropTypes.bool,
-  quantity: PropTypes.number,
-  setQuantity: PropTypes.func,
   productQuantity: PropTypes.number,
 };
 
@@ -89,8 +81,6 @@ SummaryCard.defaultProps = {
   name3: '',
   price: 0,
   cartSection: false,
-  quantity: 1,
-  setQuantity: () => {},
   productQuantity: 0,
 };
 

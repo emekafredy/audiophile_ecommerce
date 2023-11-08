@@ -18,12 +18,10 @@ function ProductSummarySection({
   wrapAtMdWidth,
   price,
   cartSection,
-  quantity,
-  setQuantity,
   productQuantity,
 }) {
   return (
-    <div className={`bg-white-200 ${classExtension}`}>
+    <div className={classExtension}>
       <div
         className={`flex items-center justify-between
           ${
@@ -52,8 +50,6 @@ function ProductSummarySection({
             slug={slug}
             price={price}
             cartSection={cartSection}
-            quantity={quantity}
-            setQuantity={setQuantity}
             productQuantity={productQuantity}
           />
         </div>
@@ -91,8 +87,6 @@ ProductSummarySection.propTypes = {
   wrapAtMdWidth: PropTypes.bool,
   price: PropTypes.number,
   cartSection: PropTypes.bool,
-  quantity: PropTypes.number,
-  setQuantity: PropTypes.func,
   productQuantity: PropTypes.number,
 };
 
@@ -104,8 +98,6 @@ ProductSummarySection.defaultProps = {
   wrapAtMdWidth: false,
   price: 0,
   cartSection: false,
-  quantity: 1,
-  setQuantity: () => {},
   productQuantity: 0,
 };
 

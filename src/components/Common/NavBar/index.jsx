@@ -1,20 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Link,
-  useParams,
-} from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import Logo from '../../../assets/shared/desktop/logo.svg';
 import HamburgerIcon from '../../../assets/shared/tablet/icon-hamburger.svg';
 import CartIcon from '../../../assets/shared/desktop/icon-cart.svg';
 import { menuItems } from '../../../data';
-import { setActiveLinkColor } from '../../../helpers';
+import { setActiveLinkColor, totalInCart } from '../../../helpers';
+import CartModal from '../../CartModal';
+import useFetchCart from '../../../hooks/useFetchCart';
+import { getCartState } from '../../../store/slices/cart';
 
-function NavBar({
-  prodCategory,
-  setProdCategory,
-}) {
+function NavBar({ prodCategory, setProdCategory }) {
+  const [showCartModal, setShowCartModal] = useState(false);
   const { category } = useParams();
+  const { loading } = useFetchCart();
+  const { cart } = useSelector(getCartState);
 
   useEffect(() => {
     setProdCategory(category);
@@ -33,11 +34,7 @@ function NavBar({
     >
       <nav className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto flex justify-between items-center py-8">
         <div className="md-min:hidden flex justify-between items-center">
-          <img
-            src={HamburgerIcon}
-            alt="menu"
-            className="mr-10"
-          />
+          <img src={HamburgerIcon} alt="menu" className="mr-10" />
           <Link to="/" className="xs-max:hidden">
             <img src={Logo} alt="app-logo" />
           </Link>
@@ -57,11 +54,7 @@ function NavBar({
               className="inline font-semibold text-xs"
             >
               <Link
-                to={
-                  item.title === 'home'
-                    ? '/'
-                    : `/${item.title}`
-                }
+                to={item.title === 'home' ? '/' : `/${item.title}`}
                 className={`md-min:mx-2 lg-min:mx-3 xl-min:mx-8 uppercase
                   ${setActiveLinkColor(
                     item.title,
@@ -75,11 +68,34 @@ function NavBar({
           ))}
         </ul>
 
-        <Link to="/cart" className="">
+        <span
+          role="button"
+          onClick={() => setShowCartModal(true)}
+          onKeyDown={() => setShowCartModal(true)}
+          tabIndex={-3}
+        >
+          {cart.length > 0 && (
+            <div
+              className="absolute top-5 bg-orange-200 rounded-full p-2
+            xs-max:right-[2%] sm-min:right-[3%] md-min:right-[4.5%] lg-min:right-[13.6%] xl-min:right-[14%] 2xl-min:right-[14.1%]"
+            >
+              <p className="flex h-2 w-2 items-center justify-center rounded-full bg-red-500 text-xxs text-white-100 p-1">
+                {totalInCart(cart)}
+              </p>
+            </div>
+          )}
           <img src={CartIcon} alt="cart-icon" />
-        </Link>
+        </span>
       </nav>
       <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto border-b border-white-100 opacity-10 md-min:opacity-20" />
+
+      {showCartModal && (
+        <CartModal
+          setShowModal={setShowCartModal}
+          loading={loading}
+          cart={cart}
+        />
+      )}
     </div>
   );
 }

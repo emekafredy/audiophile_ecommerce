@@ -3,20 +3,22 @@ import ProductSummarySection from './ProductSummarySection';
 
 function AudioGear({ data, screenSize, classExtension }) {
   return (
-    <ProductSummarySection
-      isEven={false}
-      newProduct={false}
-      data={data}
-      name={data.name}
-      name2={data.name2}
-      name3={data.name3}
-      description={data.description}
-      slug={data.slug}
-      image={data.image}
-      screenSize={screenSize}
-      classExtension={classExtension}
-      wrapAtMdWidth
-    />
+    <div className="bg-white-200">
+      <ProductSummarySection
+        isEven={false}
+        newProduct={false}
+        data={data}
+        name={data.name}
+        name2={data.name2}
+        name3={data.name3}
+        description={data.description}
+        slug={data.slug}
+        image={data.image}
+        screenSize={screenSize}
+        classExtension={classExtension}
+        wrapAtMdWidth
+      />
+    </div>
   );
 }
 

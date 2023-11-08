@@ -33,7 +33,7 @@ function App() {
               <Route path="product/:slug" element={<Product />} />
             </Route>
           </Routes>
-          <ToastContainer />
+          <ToastContainer position="top-left" />
         </div>
       </Scroll>
     </BrowserRouter>
