@@ -72,7 +72,6 @@ CartModal.propTypes = {
       totalPrice: PropTypes.number.isRequired,
       quantity: PropTypes.number.isRequired,
       slug: PropTypes.string.isRequired,
-      imagePath: PropTypes.string.isRequired,
     }).isRequired,
   ).isRequired,
 };

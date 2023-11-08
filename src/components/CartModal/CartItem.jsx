@@ -50,7 +50,6 @@ CartItem.propTypes = {
     quantity: PropTypes.number.isRequired,
     maxQuantity: PropTypes.number.isRequired,
     slug: PropTypes.string.isRequired,
-    imagePath: PropTypes.string.isRequired,
   }).isRequired,
 };
 

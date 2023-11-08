@@ -32,7 +32,6 @@ export const addItemToCart = (prod) => {
     quantity: 1,
     maxQuantity: prod.quantity,
     slug: prod.slug,
-    imagePath: `public/cart/image-${prod.slug}.jpg`,
   };
 
   const cart = localStorage.cart && JSON.parse(localStorage.cart);
