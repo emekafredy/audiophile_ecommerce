@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function Images({ gallery, screenSize, name }) {
   return (
-    <div className="bg-white-200 pt-32">
+    <div className="pt-32">
       <div
         className="flex sm-max:flex-col md-min:flex-row gap-8 items-center justify-between
           sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto

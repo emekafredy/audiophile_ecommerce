@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from '../Common';
 
 function Hero({ data, screenSize }) {
+  const navigate = useNavigate();
   return (
     <div className="bg-black-100">
       <div
@@ -34,14 +35,9 @@ function Hero({ data, screenSize }) {
           <Button
             primary
             uppercase
-            content={
-              <Link
-                to={`/product/${data.slug}`}
-                className="uppercase text-xs font-bold leading-19"
-              >
-                {data.cta}
-              </Link>
-            }
+            paddedX
+            content={data.cta}
+            handleClick={() => navigate(`/product/${data.slug}`)}
           />
         </div>
 

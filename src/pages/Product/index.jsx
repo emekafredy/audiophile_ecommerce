@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import useScreenSize from '../../hooks/useScreenSize';
 import useFetchProduct from '../../hooks/useFetchProduct';
 import {
@@ -20,14 +20,26 @@ function Product() {
   const { screenSize } = useScreenSize();
   const { loading } = useFetchProduct();
   const { product } = useSelector(getProductsState);
-  const [quantity, setQuantity] = useState(1);
+  const navigate = useNavigate();
 
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
-        <>
+        <div className="bg-white-200">
+          <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto pt-24 -mb-24">
+            <span
+              role="button"
+              className="text-smii font-regular leading-25 text-black-200 opacity-50"
+              onClick={() => navigate(-1)}
+              onKeyDown={() => navigate(-1)}
+              tabIndex={-4}
+            >
+              Go Back
+            </span>
+          </div>
+
           <ProductSummarySection
             key={product.id}
             btnTitle="Add to Cart"
@@ -41,8 +53,6 @@ function Product() {
             classExtension="pt-32"
             price={product.price}
             cartSection
-            quantity={quantity}
-            setQuantity={setQuantity}
             productQuantity={product.quantity}
           />
 
@@ -61,7 +71,7 @@ function Product() {
             otherProducts={product.others}
             screenSize={screenSize}
           />
-        </>
+        </div>
       )}
 
       <Categories data={categoriesData} />

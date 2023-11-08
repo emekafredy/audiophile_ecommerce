@@ -4,6 +4,7 @@ import Categories from './Categories';
 import ImageCard from './ImageCard';
 import EmptyState from './EmptyState';
 import Spinner from './Spinner';
+import Modal from './Modal';
 
 export {
   AudioGear,
@@ -12,4 +13,5 @@ export {
   ImageCard,
   EmptyState,
   Spinner,
+  Modal,
 };

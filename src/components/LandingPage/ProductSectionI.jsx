@@ -1,8 +1,9 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from '../Common';
 
 function ProductSectionI({ data, screenSize }) {
+  const navigate = useNavigate();
   return (
     <div className="bg-white-200 pb-12">
       <div
@@ -43,14 +44,9 @@ function ProductSectionI({ data, screenSize }) {
             <Button
               black
               hasIcon
-              content={
-                <Link
-                  to={`/product/${data.slug}`}
-                  className="uppercase text-xs font-bold leading-19"
-                >
-                  {data.cta}
-                </Link>
-              }
+              paddedX
+              content={data.cta}
+              handleClick={() => navigate(`/product/${data.slug}`)}
             />
           </div>
         </div>

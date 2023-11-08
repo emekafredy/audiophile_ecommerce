@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Button } from '../Common';
 
 function OtherProducts({ otherProducts, screenSize }) {
+  const navigate = useNavigate();
   return (
-    <div className="bg-white-200 pt-32 text-center">
+    <div className="pt-32 text-center">
       <h2
         className="uppercase font-bold text-black-200 leading-26
               sm-max:text-lg md-min:text-2xl sm-max:tracking-xs md-min:tracking-sm pb-12"
@@ -32,14 +33,9 @@ function OtherProducts({ otherProducts, screenSize }) {
               <Button
                 primary
                 uppercase
-                content={
-                  <Link
-                    to={`/product/${prod.slug}`}
-                    className="uppercase text-xs font-bold leading-19"
-                  >
-                    See product
-                  </Link>
-                }
+                paddedX
+                content="See Product"
+                handleClick={() => navigate(`/product/${prod.slug}`)}
               />
             </div>
           );

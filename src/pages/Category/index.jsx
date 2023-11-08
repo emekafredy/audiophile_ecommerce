@@ -20,7 +20,7 @@ function Category() {
   const { products } = useSelector(getProductsState);
 
   return (
-    <>
+    <div className="bg-white-200">
       <CategoryHeader category={category} />
 
       {loading ? (
@@ -54,7 +54,7 @@ function Category() {
         screenSize={screenSize}
         classExtension="pb-32"
       />
-    </>
+    </div>
   );
 }
 

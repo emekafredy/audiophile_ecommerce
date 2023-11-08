@@ -39,6 +39,7 @@ function Categories({ data }) {
               </p>
               <Button
                 hasIcon
+                paddedX
                 content={
                   <p className="uppercase text-xs font-bold leading-19 mr-2 opacity-70">
                     Shop
