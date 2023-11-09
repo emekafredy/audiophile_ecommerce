@@ -1,6 +1,7 @@
 # [Audiophile E-commerce](https://audiophile-silk.vercel.app/)
 
 ### Screenshot
+![emeka-audiophile](https://github.com/emekafredy/audiophile_ecommerce/assets/29521319/958e8e94-28ed-4307-97f3-70990cee1788)
 
 ### Links
 
