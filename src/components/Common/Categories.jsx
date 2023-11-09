@@ -14,7 +14,7 @@ function Categories({ data }) {
   return (
     <div className="bg-white-200 pt-52 pb-36">
       <div
-        className="flex sm-max:flex-col md-min:flex-row sm-max:gap-32 md-min:gap-4 lg-min:gap-8 items-center justify-between
+        className="grid sm-max:grid-cols-1 md-min:grid-cols-3 sm-max:gap-32 md-min:gap-4 lg-min:gap-8 items-center justify-between
           lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto"
       >
         {data?.map((category) => {
@@ -24,7 +24,7 @@ function Categories({ data }) {
               role="button"
               tabIndex={Number(category.id)}
               className="text-center bg-gray-100 rounded-lg text-black-200
-            hover:text-orange-200 hover:opacity-100 cursor-pointer w-[100%]"
+            hover:text-orange-200 hover:opacity-100 cursor-pointer w-[100%] h-[250px]"
               onClick={() => navigateCategory(category.name)}
               onKeyDown={() => navigateCategory(category.name)}
             >
