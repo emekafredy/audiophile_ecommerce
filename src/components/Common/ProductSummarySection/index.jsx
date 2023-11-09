@@ -29,7 +29,7 @@ function ProductSummarySection({
               ? 'md-max:flex-col lg-min:flex-row md-min:gap-8'
               : 'sm-max:flex-col md-min:flex-row sm-min:gap-8 md-min:gap-12 lg-min:gap-20'
           }
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto`}
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto`}
       >
         <div
           className={`md-max:order-2 ${isEven ? 'lg-min:order-2' : ''}

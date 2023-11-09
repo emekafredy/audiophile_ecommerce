@@ -11,11 +11,11 @@ export const getCart = async () => {
       !localStorage.cart ||
       JSON.parse(localStorage.cart).length === 0
     ) {
-      return getResponse(204);
+      return getResponse(204, [], true);
     }
 
     const result = await JSON.parse(localStorage.cart);
-    return getResponse(200, result);
+    return getResponse(200, result, true);
   } catch (err) {
     return getResponse(500, [], false);
   }

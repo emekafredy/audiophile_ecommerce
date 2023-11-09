@@ -1,5 +1,5 @@
 import products from '../data/data.json';
-import { getResponse } from '.';
+import { getResponse, emptyProductState } from '.';
 
 export const getProductsByCategory = async (category) => {
   try {
@@ -9,10 +9,10 @@ export const getProductsByCategory = async (category) => {
           audio.category.toLowerCase() === category.toLowerCase(),
       );
 
-      return getResponse(200, result);
+      return getResponse(200, result, true);
     }
 
-    return getResponse(204);
+    return getResponse(204, [], true);
   } catch (err) {
     return getResponse(500, [], false);
   }
@@ -25,11 +25,12 @@ export const getProduct = async (slug) => {
         (product) => product.slug === slug,
       );
 
-      return getResponse(200, result);
+      if (result) {
+        return getResponse(200, result, true);
+      }
     }
-
-    return getResponse(204);
+    return getResponse(204, emptyProductState, true);
   } catch (err) {
-    return getResponse(500, [], false);
+    return getResponse(500, emptyProductState, false);
   }
 };

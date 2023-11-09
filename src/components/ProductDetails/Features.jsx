@@ -6,7 +6,7 @@ function Features({ features, includes }) {
       <div
         className="flex
           sm-max:flex-col md-min:flex-row sm-max:gap-12 md-min:gap-28
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto"
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto"
       >
         <div className="md-min:w-[55%]">
           <h2

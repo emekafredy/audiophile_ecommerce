@@ -6,6 +6,7 @@ import {
   Categories,
   Spinner,
   AudioGear,
+  NotFound,
 } from '../../components/Common';
 import { getProductsState } from '../../store/slices/product';
 import ProductSummarySection from '../../components/Common/ProductSummarySection';
@@ -28,7 +29,7 @@ function Product() {
         <Spinner />
       ) : (
         <div className="bg-white-200">
-          <div className="sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto pt-24 -mb-24">
+          <div className="lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto pt-24 -mb-24">
             <span
               role="button"
               className="text-smii font-regular leading-25 text-black-200 opacity-50"
@@ -40,37 +41,43 @@ function Product() {
             </span>
           </div>
 
-          <ProductSummarySection
-            key={product.id}
-            btnTitle="Add to Cart"
-            isEven
-            newProduct={product.new}
-            name={product.name}
-            description={product.description}
-            slug={product.slug}
-            image={product.image}
-            screenSize={screenSize}
-            classExtension="pt-32"
-            price={product.price}
-            cartSection
-            productQuantity={product.quantity}
-          />
+          {product.name === '' ? (
+            <NotFound message="Sorry! Product Does Not Exist" />
+          ) : (
+            <>
+              <ProductSummarySection
+                key={product.id}
+                btnTitle="Add to Cart"
+                isEven
+                newProduct={product.new}
+                name={product.name}
+                description={product.description}
+                slug={product.slug}
+                image={product.image}
+                screenSize={screenSize}
+                classExtension="pt-32"
+                price={product.price}
+                cartSection
+                productQuantity={product.quantity}
+              />
 
-          <Features
-            features={product.features}
-            includes={product.includes}
-          />
+              <Features
+                features={product.features}
+                includes={product.includes}
+              />
 
-          <Images
-            gallery={product.gallery}
-            screenSize={screenSize}
-            name={product.name}
-          />
+              <Images
+                gallery={product.gallery}
+                screenSize={screenSize}
+                name={product.name}
+              />
 
-          <OtherProducts
-            otherProducts={product.others}
-            screenSize={screenSize}
-          />
+              <OtherProducts
+                otherProducts={product.others}
+                screenSize={screenSize}
+              />
+            </>
+          )}
         </div>
       )}
 

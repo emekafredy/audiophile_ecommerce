@@ -9,7 +9,7 @@ function ProductSectionII({ data, screenSize }) {
       <div
         className="rounded-lg
         md-max:bg-cover lg-min:bg-[75%] xl-min:bg-cover
-        sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto h-[320px]"
+        lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto h-[320px]"
       >
         <img
           src={data.image[`${screenSize}`]}

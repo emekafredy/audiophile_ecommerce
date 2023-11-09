@@ -10,7 +10,7 @@ function ProductSectionI({ data, screenSize }) {
         className="bg-orange-200 bg-[url('assets/home/desktop/pattern-circles.svg')] bg-no-repeat
           md-max:bg-p-md lg-min:bg-p-lg xl-min:bg-p-xl 2xl-min:bg-p-2xl
           md-max:bg-size-md lg-min:bg-size-lg xl-min:bg-size-xl 2xl-min:bg-size-auto
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto rounded-lg
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto rounded-lg
           md-max:h-[720px] lg-min:h-[560px] overflow-hidden"
       >
         <div

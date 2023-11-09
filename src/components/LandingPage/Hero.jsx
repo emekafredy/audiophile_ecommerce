@@ -9,7 +9,8 @@ function Hero({ data, screenSize }) {
       <div
         className="lg-min:flex lg-min:flex-wrap lg-min:items-center lg-min:justify-between
         md-max:bg-[url('assets/home/tablet/image-hero.png')] bg-no-repeat bg-cover bg-center
-        lg-min:w-[70%] m-auto sm-max:h-[800px] md-min:h-[700px] lg-min:h-auto"
+        lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto
+        sm-max:h-[800px] md-min:h-[700px] lg-min:h-auto"
       >
         <div
           className="md-max:w-[100%] lg-min:w-[40%]

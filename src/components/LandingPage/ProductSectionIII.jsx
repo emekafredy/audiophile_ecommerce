@@ -9,7 +9,7 @@ function ProductSectionIII({ data, screenSize }) {
       <div
         className="grid xs-max:grid-cols-1 sm-min:grid-cols-2
           xs-max:gap-4 sm-min:gap-2 md-min:gap-4 lg-min:gap-12 xl-min:gap-16 2xl-min:gap-24
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto"
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto"
       >
         <div className="sm-max:h-[200px] md-min:h-[320px]">
           <img

@@ -1,8 +1,20 @@
-# React + Vite
+# [Audiophile E-commerce](https://audiophile-silk.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Kanban task management web app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/kanban-task-management-web-app-wgQLt-HlbB)
 
-Currently, two official plugins are available:
+### Screenshot
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Links
+
+- Solution URL: [Repo](https://github.com/emekafredy/audiophile_ecommerce)
+- Live Site URL: [Kanban Task Manager](https://audiophile-silk.vercel.app/)
+
+### Built with
+
+- [React (with Vite - React SWC)](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+
+## Author
+
+- Twitter - [@flowwcity](https://www.twitter.com/flowwcity)
