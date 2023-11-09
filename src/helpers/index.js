@@ -57,7 +57,7 @@ export const calculateFees = (cart) => {
   const total = totalInCart(cart, 'totalPrice');
   const totalPrice = formatAndSeparateNumber(total);
   const shipping = 50;
-  const vat = formatAndSeparateNumber(total * 0.2);
+  const vat = formatAndSeparateNumber((total * 0.2).toFixed(2));
   const grandTotal = formatAndSeparateNumber(
     total + total * 0.2 + 50,
   );
