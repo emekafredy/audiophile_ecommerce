@@ -4,15 +4,18 @@ import { Link, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import Logo from '../../../assets/shared/desktop/logo.svg';
 import HamburgerIcon from '../../../assets/shared/tablet/icon-hamburger.svg';
+import CloseIcon from '../../../assets/shared/tablet/icon-close.svg';
 import CartIcon from '../../../assets/shared/desktop/icon-cart.svg';
-import { menuItems } from '../../../data';
+import { categoriesData, menuItems } from '../../../data';
 import { setActiveLinkColor, totalInCart } from '../../../helpers';
 import CartModal from '../../Cart';
 import useFetchCart from '../../../hooks/useFetchCart';
 import { getCartState } from '../../../store/slices/cart';
+import MobileMenu from './MobileMenu';
 
 function NavBar({ prodCategory, setProdCategory }) {
   const [showCartModal, setShowCartModal] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { category } = useParams();
   const { loading } = useFetchCart();
   const { cart } = useSelector(getCartState);
@@ -36,8 +39,19 @@ function NavBar({ prodCategory, setProdCategory }) {
         className="lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px]
           m-auto flex justify-between items-center py-8"
       >
-        <div className="md-min:hidden flex justify-between items-center">
-          <img src={HamburgerIcon} alt="menu" className="mr-10" />
+        <div className="md-min:hidden flex justify-between items-center transition-all duration-500">
+          <div
+            role="button"
+            tabIndex="-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onKeyDown={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <img
+              src={mobileMenuOpen ? CloseIcon : HamburgerIcon}
+              alt="menu"
+              className="mr-10 w-6"
+            />
+          </div>
           <Link to="/" className="xs-max:hidden">
             <img src={Logo} alt="app-logo" />
           </Link>
@@ -104,6 +118,19 @@ function NavBar({ prodCategory, setProdCategory }) {
           cart={cart}
         />
       )}
+
+      <div
+        className={`md-min:hidden absolute inset-0 h-[100px] bg-white-100 ${
+          mobileMenuOpen ? '-top-[100%]' : '-top-[1600%]'
+        } w-[98%] m-auto transition-all duration-500 mt-[12rem] z-[1210]`}
+      >
+        <MobileMenu data={categoriesData} />
+      </div>
+      <div
+        className={`md-min:hidden opacity-60 fixed inset-0 z-[1001] bg-black-200  ${
+          mobileMenuOpen ? 'top-[11%]' : 'top-[100%]'
+        } transition-all duration-500`}
+      />
     </div>
   );
 }
