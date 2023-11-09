@@ -19,12 +19,14 @@ export default {
       white: {
         100: '#FFFFFF',
         200: '#FAFAFA',
+        300: '#E3E3E3',
       },
       gray: {
         100: '#F1F1F1',
         200: '#979797',
         300: '#D8D8D8',
         400: '#4C4C4C',
+        500: '##CFCFCF',
       },
       black: {
         100: '#101010',
@@ -35,7 +37,7 @@ export default {
         200: '#D87D4A',
       },
       red: {
-        100: '#FF0000',
+        100: '#CD2C2C',
       },
     },
     fontFamily: {

@@ -34,7 +34,7 @@ function Button({
         secondary,
       'bg-black-200 text-white-100 hover:bg-gray-400 hover:text-white-100':
         black,
-      'bg-transparent text-gray-200 hover:text-orange-200 disabled:hover:text-gray-200 underline px-0':
+      'bg-transparent text-gray-200 hover:text-orange-200 disabled:hover:text-gray-200 px-0':
         transparent,
       'bg-transparent text-black-200 border border-black-200 hover:text-white-100 hover:bg-black-200':
         transparentBlack,

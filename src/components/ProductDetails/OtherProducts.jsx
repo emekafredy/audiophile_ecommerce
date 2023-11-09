@@ -15,7 +15,7 @@ function OtherProducts({ otherProducts, screenSize }) {
 
       <div
         className="flex sm-max:flex-col md-min:flex-row sm-max:gap-20 md-min:gap-4 lg-min:gap-8 items-center justify-between
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto"
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto"
       >
         {otherProducts?.map((prod) => {
           return (

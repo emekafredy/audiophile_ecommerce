@@ -8,14 +8,14 @@ function Categories({ data }) {
   const navigate = useNavigate();
 
   function navigateCategory(name) {
-    navigate(`/${name}`);
+    navigate(`/category/${name}`);
   }
 
   return (
     <div className="bg-white-200 pt-52 pb-36">
       <div
         className="flex sm-max:flex-col md-min:flex-row sm-max:gap-32 md-min:gap-4 lg-min:gap-8 items-center justify-between
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto"
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto"
       >
         {data?.map((category) => {
           return (

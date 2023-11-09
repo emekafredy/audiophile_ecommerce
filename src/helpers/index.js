@@ -38,9 +38,9 @@ export const productInCart = (cart, productSlug) => {
   return product;
 };
 
-export const totalInCart = (cart) => {
+export const totalInCart = (cart, prop) => {
   return cart.reduce((acc, item) => {
-    return acc + item.quantity;
+    return acc + item[prop];
   }, 0);
 };
 
@@ -51,6 +51,23 @@ export const orderData = (index, data, updatedData) => {
   currentData[index] = modified;
 
   return currentData;
+};
+
+export const calculateFees = (cart) => {
+  const total = totalInCart(cart, 'totalPrice');
+  const totalPrice = formatAndSeparateNumber(total);
+  const shipping = 50;
+  const vat = formatAndSeparateNumber(total * 0.2);
+  const grandTotal = formatAndSeparateNumber(
+    total + total * 0.2 + 50,
+  );
+
+  return {
+    totalPrice,
+    shipping,
+    vat,
+    grandTotal,
+  };
 };
 
 export const renderErrorMessage = (error) => {

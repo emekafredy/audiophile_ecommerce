@@ -12,9 +12,9 @@ function useFetchProduct() {
   useEffect(() => {
     const fetchProduct = async () => {
       setLoading(true);
-      const data = await getProduct(slug);
+      const { data } = await getProduct(slug);
 
-      await dispatch(setProduct(data.data));
+      await dispatch(setProduct(data));
       setLoading(false);
     };
 

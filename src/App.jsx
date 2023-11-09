@@ -12,6 +12,8 @@ import Home from './pages/Home';
 import Category from './pages/Category';
 import Layout from './Layout';
 import Product from './pages/Product';
+import Checkout from './pages/Checkout';
+import { NotFound } from './components/Common';
 
 const Scroll = ({ children }) => {
   const location = useLocation();
@@ -29,8 +31,13 @@ function App() {
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Home />} />
-              <Route path="/:category" element={<Category />} />
+              <Route
+                path="category/:category"
+                element={<Category />}
+              />
               <Route path="product/:slug" element={<Product />} />
+              <Route path="checkout" element={<Checkout />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
           <ToastContainer position="top-left" />

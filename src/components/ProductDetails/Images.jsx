@@ -5,11 +5,11 @@ function Images({ gallery, screenSize, name }) {
     <div className="pt-32">
       <div
         className="flex sm-max:flex-col md-min:flex-row gap-8 items-center justify-between
-          sm-max:w-[90%] md-min:w-[88%] lg-min:w-[70%] m-auto
+          lg-max:w-[93%] xl-min:w-[1100px] 2xl-min:w-[1250px] m-auto
           md-min:h-[500px] lg-min:h-[500px] xl-min:h-[600px] 2xl-min:h-[750px]"
       >
         <div className="sm-max:w-[100%] md-min:w-[45%] h-[100%]">
-          <div className="flex flex-col gap-8 items-center justify-between h-[100%]">
+          <div className="flex flex-col gap-8 items-center justify-between md-min:h-[100%] lg-min:h-[95%] 2xl-min:h-[100%]">
             <img
               src={gallery.first[`${screenSize}`]}
               className="h-[50%] w-full rounded-lg mb"
